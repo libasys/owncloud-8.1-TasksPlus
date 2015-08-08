@@ -18,31 +18,31 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
- 
-$(document).ready(function(){
-	
-	$('#body-public').addClass('appbody-tasksplus');
-	$('#body-public').removeClass('appbody-gallery');
-	
+
+$(document).ready(function() {
+
+	$('#body-user').addClass('appbody-tasksplus');
+	$('#body-user').removeClass('appbody-gallery');
+
 	$("#showLocation").tooltip({
-				items : "img, [data-geo], [title]",
-				position : {
-					my : "left+15 center",
-					at : "right center"
-				},
-				content : function() {
-					var element = $(this);
-					if (element.is("[data-geo]")) {
-						var text = element.text();
-						return "<img class='map' alt='" + text + "' src='http://maps.google.com/maps/api/staticmap?" + "zoom=14&size=350x350&maptype=terrain&sensor=false&center=" + text + "'>";
-					}
-					if (element.is("[title]")) {
-						return element.attr("title");
-					}
-					if (element.is("img")) {
-						return element.attr("alt");
-					}
-				}
-			});
-	
+		items: "img, [data-geo], [title]",
+		position: {
+			my: "left+15 center",
+			at: "right center"
+		},
+		content: function() {
+			var element = $(this);
+			if (element.is("[data-geo]")) {
+				var text = element.text();
+				return "<img class='map' alt='" + text + "' src='http://maps.google.com/maps/api/staticmap?" + "zoom=14&size=350x350&maptype=terrain&sensor=false&center=" + text + "'>";
+			}
+			if (element.is("[title]")) {
+				return element.attr("title");
+			}
+			if (element.is("img")) {
+				return element.attr("alt");
+			}
+		}
+	});
+
 });
