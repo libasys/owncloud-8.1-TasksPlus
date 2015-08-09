@@ -21,8 +21,6 @@
 
 $(document).ready(function() {
 
-	$('#body-user').addClass('appbody-tasksplus');
-	$('#body-user').removeClass('appbody-gallery');
 
 	$("#showLocation").tooltip({
 		items: "img, [data-geo], [title]",
