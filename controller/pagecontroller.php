@@ -70,6 +70,9 @@ class PageController extends Controller {
 			\OCP\Util::addStyle($this->appName, 'style');
 			\OCP\Util::addScript(CalendarApp::$appname, '3rdparty/tag-it');
 			\OCP\Util::addStyle(CalendarApp::$appname, '3rdparty/jquery.tagit');
+			\OCP\Util::addScript(TasksApp::$appname, 'share');
+			\OCP\Util::addScript(TasksApp::$appname, 'header-color');
+
 			
 			
 			$csp = new \OCP\AppFramework\Http\ContentSecurityPolicy();
